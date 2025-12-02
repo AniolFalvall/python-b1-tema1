@@ -42,7 +42,15 @@ Exemple:
 '''
 
 def sum_odd_numbers(list_numbers):
-    # Write here your code
+    sum = 0
+    for i in list_numbers:
+        if not isinstance(i, int):
+            raise ValueError("Numbers in the list must be integer.")
+        elif i < 0:
+            raise ValueError("Numbers in the list must be greater or equal to 0.")
+        elif i %2 != 0:
+            sum += i
+    return sum
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
